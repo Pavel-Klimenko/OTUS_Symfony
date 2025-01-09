@@ -4,6 +4,6 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-app_test:
-    path: /test
-    controller: App\Controller\LuckyController::number
+teachers:
+    path: /teachers
+    controller: App\Controller\TeacherController::getTeachersList

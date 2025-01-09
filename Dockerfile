@@ -22,6 +22,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	file \
 	gettext \
 	git \
+    nodejs \
+    npm \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN set -eux; \
@@ -82,6 +84,8 @@ COPY --link composer.* symfony.* ./
 RUN set -eux; \
 	composer install --no-cache --prefer-dist --no-dev --no-autoloader --no-scripts --no-progress
 
+RUN npm install
+
 # copy sources
 COPY --link . ./
 RUN rm -Rf frankenphp/
@@ -91,4 +95,7 @@ RUN set -eux; \
 	composer dump-autoload --classmap-authoritative --no-dev; \
 	composer dump-env prod; \
 	composer run-script --no-dev post-install-cmd; \
-	chmod +x bin/console; sync;
+	chmod +x bin/console; sync; \
+
+RUN export PATH="$HOME/.symfony5/bin:$PATH"
+

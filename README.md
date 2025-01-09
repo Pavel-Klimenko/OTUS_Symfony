@@ -49,3 +49,10 @@ Symfony Docker is available under the MIT License.
 ## Credits
 
 Created by [Kévin Dunglas](https://dunglas.dev), co-maintained by [Maxime Helias](https://twitter.com/maxhelias) and sponsored by [Les-Tilleuls.coop](https://les-tilleuls.coop).
+
+
+OTUS project:
+
+Проект: Сервис подбора преподавателей.
+Сервис позволяет подобрать наилучшего преподавателя для ученика,
+исходя из компетенции преподавателей и потребностей студента.
