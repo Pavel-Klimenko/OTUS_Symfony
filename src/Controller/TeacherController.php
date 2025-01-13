@@ -9,10 +9,6 @@ class TeacherController extends AbstractController
 {
     public function getTeachersList(): Response
     {
-        $number = random_int(0, 100);
-
-        return $this->render('teachers.html.twig', [
-            'number' => $number,
-        ]);
+        return $this->render('teachers.html.twig');
     }
 }
