@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Presentation\Repository;
 
 use App\Domain\Entity\Worker;

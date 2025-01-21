@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Application\Worker;
 
 use App\Domain\Entity\Worker;
@@ -21,7 +23,7 @@ class CreateWorkerUseCase
           new Age(24),
           new Gender('MALE'),
           new Name('Pavel', 'Klimenko', 'Alexandrovich'),
-          new Salary('2400'),
+          new Salary(2400),
         );
 
         $this->workerRepository->add($worker);
